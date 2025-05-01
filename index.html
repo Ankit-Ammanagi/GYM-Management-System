@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gym Management System - Login</title>
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+  <div class="login-container">
+    <h2>Login</h2>
+    <input type="email" id="email" placeholder="Email" required><br>
+    <input type="password" id="password" placeholder="Password" required><br>
+    <button onclick="login()">Login</button>
+  </div>
+  <div class="title">
+    <h1>GMS</h1>
+  </div>
+  <div id="bgVideo">
+    <video src="./assets/loginVideo/login.mp4" autoplay loop muted></video>
+  </div>
+
+  <!-- Firebase SDKs -->
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore-compat.js"></script>
+
+  <!-- Custom Scripts -->
+  <script src="scripts/firebase-config.js"></script>
+  <script src="scripts/auth.js"></script>
+</body>
+
+</html>

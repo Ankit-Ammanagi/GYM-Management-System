@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Dashboard - GYM</title>
+  <link rel="stylesheet" href="styles/dash.css">
+</head>
+
+<body>
+  <h2 class="title">Admin Dashboard</h2>
+  <section class="container">
+    <div class="members">
+      <section>
+        <h3>Add Member</h3>
+        <input type="text" id="memberName" placeholder="Full Name"><br>
+        <input type="email" id="memberEmail" placeholder="Email"><br>
+        <input type="text" id="feePackage" placeholder="Fee Package (e.g., Monthly/Yearly)"><br>
+        <button onclick="addMember()">Add Member</button>
+      </section>
+      <div class="membersView">
+        <section>
+          <h3>Search Members</h3>
+          <input type="text" id="searchInput" placeholder="Search by name or email" onkeyup="filterMembers()">
+        </section>
+        <section>
+          <h3>Member List</h3>
+          <div id="memberList"></div>
+        </section>
+      </div>
+    </div>
+    <hr>
+    <section class="bill">
+      <h3>Generate Bill & Send Notification</h3>
+      <input type="email" id="billMemberEmail" placeholder="Member Email"><br>
+      <input type="number" id="amount" placeholder="Amount"><br>
+      <input type="text" id="note" placeholder="Note (e.g. Monthly fee due)"><br>
+      <button onclick="generateBill()">Generate Bill</button>
+    </section>
+
+    <hr>
+    <section class="supplement">
+      <h3>Add Supplement/Diet Item</h3>
+      <input type="text" id="itemName" placeholder="Item Name"><br>
+      <input type="text" id="itemDesc" placeholder="Description"><br>
+      <input type="number" id="itemPrice" placeholder="Price"><br>
+      <button onclick="addItem()">Add Item</button>
+    </section>
+
+
+    <hr>
+    <section class="requests">
+      <h3>Member Item Requests</h3>
+      <div id="requestList"></div>
+      <button onclick="fetchRequests()">Refresh</button>
+    </section>
+
+    <hr>
+    <section>
+      <h3>Export Reports (CSV)</h3>
+      <button onclick="exportMembers()">Export Members</button>
+      <button onclick="exportBills()">Export Bills</button>
+      <button onclick="exportRequests()">Export Requests</button>
+    </section>
+  </section>
+
+  <!-- Firebase SDKs -->
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore-compat.js"></script>
+
+  <!-- Custom Scripts -->
+  <script src="scripts/firebase-config.js"></script>
+  <script src="scripts/admin.js"></script>
+</body>
+
+</html>
