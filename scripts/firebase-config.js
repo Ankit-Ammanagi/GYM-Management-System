@@ -5,12 +5,12 @@
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyBEqOKZsmAKE_2sT91729vW9znn4-z4qwg",
-  authDomain: "gym-management-system-92bee.firebaseapp.com",
-  projectId: "gym-management-system-92bee",
-  storageBucket: "gym-management-system-92bee.firebasestorage.app",
-  messagingSenderId: "763017929957",
-  appId: "1:763017929957:web:9c964f39c196cb55a5200c"
+  apiKey: "",
+  authDomain: "",
+  projectId: "",
+  storageBucket: "p",
+  messagingSenderId: "",
+  appId: ""
 };
 
 // Initialize Firebase
